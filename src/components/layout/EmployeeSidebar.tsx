@@ -43,7 +43,7 @@ const EmployeeSidebar = () => {
   };
 
   const getNavClass = ({ isActive }: { isActive: boolean }) =>
-    isActive ? 'bg-primary text-primary-foreground font-medium' : 'text-foreground hover:bg-muted/70 transition-colors duration-200';
+    isActive ? 'bg-primary text-primary-foreground font-medium' : 'text-foreground hover:bg-muted/70 hover:text-foreground transition-colors duration-200';
 
   return (
     <Sidebar className={collapsed ? 'w-14' : 'w-60'} collapsible="icon">
