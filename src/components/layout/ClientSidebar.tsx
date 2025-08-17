@@ -57,7 +57,9 @@ const ClientSidebar = () => {
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <NavLink to={item.url} end className={getNavClass}>
+                    <NavLink to={item.url} end className={({ isActive }) => 
+                      `${getNavClass({ isActive })} flex items-center gap-2 text-foreground`
+                    }>
                       <item.icon className="h-4 w-4" />
                       {!collapsed && <span>{item.title}</span>}
                     </NavLink>
